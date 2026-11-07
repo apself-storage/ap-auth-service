@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17
+    container_name: ap-auth-db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ap_auth
+      POSTGRES_USER: ap_auth_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+    ports:
+      - "127.0.0.1:5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
