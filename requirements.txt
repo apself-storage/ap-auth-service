@@ -1,0 +1,20 @@
+# framework
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy
+psycopg[binary]
+alembic
+
+# Configuration
+pydantic-settings
+email-validator
+
+# Authentication and security
+argon2-cffi
+PyJWT[crypto]
+
+# Testing
+pytest
+httpx
